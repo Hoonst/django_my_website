@@ -12,3 +12,6 @@ class Post(models.Model):
     created = models.DateTimeField()
     #작성자
     author = models.ForeignKey(User, on_delete=True)
+
+    def __str__(self):
+        return '{} :: {}'.format(self.title, self.author)
