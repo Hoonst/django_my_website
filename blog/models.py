@@ -8,6 +8,10 @@ class Post(models.Model):
     title = models.CharField(max_length =30)
     #글 내용
     content = models.TextField()
+
+    head_image = models.ImageField(upload_to='blog/%Y/%m/%d/', blank=True)
+
+
     #날짜
     created = models.DateTimeField()
     #작성자
